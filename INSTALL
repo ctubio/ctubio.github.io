@@ -10,7 +10,7 @@ echo -e "Yikes!\n" \
 read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
 case $REPLY in
   [yY][eE][sS]|[yY])
-    echo "Fetching the latest release.." && \
+    echo "Fetching the latest stable release.." && \
     read tag_name created_at tarball_url <<< $( \
       curl -s https://api.github.com/repos/ctubio/ctubio.github.io/releases/latest | \
         grep "\"tag_name\"\|\"created_at\"\|\"tarball_url\"" | \

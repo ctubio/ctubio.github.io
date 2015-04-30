@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/ctubio/ctubio.github.io/tree/HEAD)
+
+[Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.2...HEAD)
+
+**Fixed bugs:**
+
+- Broken read from standard input in INSTALL script. [\#3](https://github.com/ctubio/ctubio.github.io/issues/3)
+
 ## [v0.0.0.2](https://github.com/ctubio/ctubio.github.io/tree/v0.0.0.2) (2015-04-30)
 
 [Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.1...v0.0.0.2)
