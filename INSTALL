@@ -1,0 +1,28 @@
+#!/bin/bash
+# BEGIN of ctubio.github.io, mighty installer.
+## How appropiate, you install like a cow.
+# but.. look behind you! a Three-Headed Monkey!
+echo -e "Yikes!\n" \
+  "Let's install some initial files for your new project.\n" \
+  "- Install path: ${PWD}";
+read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
+case $REPLY in
+  [yY][eE][sS]|[yY]) 
+    echo "Downloading the sources.. please wait." && \
+      curl -s https://codeload.github.com/ctubio/ctubio.github.io/tar.gz/v`curl -s https://ctubio.github.io/VERSION` | \
+      tar --wildcards --strip 2 -vxzf - */src && \
+      ls -hal --color;
+    ;;
+  *)
+    echo -e "wtf.. cd to a nicer path and type again:\n" \
+      "curl -s https://ctubio.github.io/INSTALL | bash";
+    ;;
+esac;
+if [ "$?" -ne "0" ]; then
+  echo "oh well, something went wrong..";
+else
+  echo "That's all.. thank you!";
+fi;
+# and very special thanks to RON GILBERT for Monkey Island.
+# and remember! Never pay more than 20 bucks for a computer game.
+# and END
