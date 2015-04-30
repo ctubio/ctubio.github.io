@@ -19,7 +19,7 @@ case $REPLY in
     echo -e " - ${tag_name} last modified: ${created_at}" \
       "\nDownloading your new project files, please wait.." && \
     curl -Ls "${tarball_url}" | \
-      tar --wildcards --show-transformed --strip 2 -vxzf - */src && \
+      tar --wildcards --backup=simple --show-transformed --strip 2 -vxzf - */src && \
     ls -hal --color;
     ;;
   *)
