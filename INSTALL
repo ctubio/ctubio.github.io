@@ -1,6 +1,6 @@
 #!/bin/bash
 # BEGIN of ctubio.github.io, mighty installer.
-# runs from any path at your machine, just type in your tty: 
+# runs from any path at your machine, just type in your tty:
 #   bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
 ## How appropiate, you install like a cow.
 # but.. look behind you! a Three-Headed Monkey!
@@ -9,21 +9,29 @@ echo -e "Yikes!\n" \
   "- Install path: ${PWD}";
 read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
 case $REPLY in
-  [yY][eE][sS]|[yY]) 
-    echo "Downloading the sources.. please wait." && \
-      curl -s https://codeload.github.com/ctubio/ctubio.github.io/tar.gz/v`curl -s https://ctubio.github.io/VERSION` | \
-      tar --wildcards --strip 2 -vxzf - */src && \
-      ls -hal --color;
+  [yY][eE][sS]|[yY])
+    echo "Fetching the latest release.." && \
+    read tag_name created_at tarball_url <<< $( \
+      curl -s https://api.github.com/repos/ctubio/ctubio.github.io/releases/latest | \
+        grep "\"tag_name\"\|\"created_at\"\|\"tarball_url\"" | \
+          sed -e "s/.*: \"//g" -e "s/\".*//g" \
+    ) && created_at="${created_at/T/ }" && created_at="${created_at%Z}" && \
+    echo -e " - ${tag_name} last modified: ${created_at}" \
+      "\nDownloading your new project files, please wait.." && \
+    curl -Ls "${tarball_url}" | \
+      tar --wildcards --show-transformed --strip 2 -vxzf - */src && \
+    ls -hal --color;
     ;;
   *)
-    echo -e "wtf.. cd to a nicer path and type again:\n" \
-      "bash -c \"\$(curl -s https://ctubio.github.io/INSTALL)\";";
+    echo -ne "wtf.. cd to a nicer path and type again:\n" \
+      "bash -c \"\$(curl -s https://ctubio.github.io/INSTALL)\";" \
+      "\nanyway.. ";
     ;;
 esac;
 if [ "$?" -ne "0" ]; then
   echo "oh well, something went wrong..";
 else
-  echo "That's all.. thank you!";
+  echo "all done.. Thank you!";
 fi;
 # and very special thanks to RON GILBERT for Monkey Island.
 # and remember! Never pay more than 20 bucks for a computer game.
