@@ -1,5 +1,7 @@
 #!/bin/bash
 # BEGIN of ctubio.github.io, mighty installer.
+# runs from any path at your machine, just type in your tty: 
+#   bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
 ## How appropiate, you install like a cow.
 # but.. look behind you! a Three-Headed Monkey!
 echo -e "Yikes!\n" \
@@ -15,7 +17,7 @@ case $REPLY in
     ;;
   *)
     echo -e "wtf.. cd to a nicer path and type again:\n" \
-      "curl -s https://ctubio.github.io/INSTALL | bash";
+      "bash -c \"\$(curl -s https://ctubio.github.io/INSTALL)\";";
     ;;
 esac;
 if [ "$?" -ne "0" ]; then
