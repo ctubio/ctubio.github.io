@@ -16,7 +16,7 @@ case $REPLY in
         grep "\"tag_name\"\|\"created_at\"\|\"tarball_url\"" | \
           sed -e "s/.*: \"//" -e "s/\".*//" \
     ) && \
-    echo -e " - ${tag_name} last modified: `echo ${created_at/T/ } | tr -d Z`" \
+    echo -e " - ${tag_name} last modified at `echo ${created_at/T/ } | tr -d Z`" \
       "\nDownloading your new project files, please wait.." && \
     curl -Ls "${tarball_url}" | \
       tar --wildcards --backup=simple --show-transformed --strip 2 -vxzf - */src && \
