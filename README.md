@@ -1,5 +1,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Latest Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg)](/releases/latest)
+[![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](/issues)
 
 [ctubio.github.io](https://ctubio.github.io) is a mighty installer
 that provides a few [common files](src) for *new* or *orphan* projects.
