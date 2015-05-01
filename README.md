@@ -1,5 +1,3 @@
-# ctubio.github.io
-
 [![Software License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Latest Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg)](/releases/latest)
 
