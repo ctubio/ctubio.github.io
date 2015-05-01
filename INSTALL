@@ -1,5 +1,5 @@
 #!/bin/bash
-# BEGIN of ctubio.github.io, mighty installer.
+# BEGIN of INSTALL file, mighty installer.
 # runs from any path at your machine, just type in your tty:
 #   bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
 ## How appropiate, you install like a cow.
@@ -14,18 +14,21 @@ case $REPLY in
     read tag_name created_at tarball_url <<< $( \
       curl -s https://api.github.com/repos/ctubio/ctubio.github.io/releases/latest | \
         grep "\"tag_name\"\|\"created_at\"\|\"tarball_url\"" | \
-          sed -e "s/.*: \"//g" -e "s/\".*//g" \
-    ) && created_at="${created_at/T/ }" && created_at="${created_at%Z}" && \
-    echo -e " - ${tag_name} last modified: ${created_at}" \
+          sed -e "s/.*: \"//" -e "s/\".*//" \
+    ) && \
+    echo -e " - ${tag_name} last modified: `echo ${created_at/T/ } | tr -d Z`" \
       "\nDownloading your new project files, please wait.." && \
     curl -Ls "${tarball_url}" | \
       tar --wildcards --backup=simple --show-transformed --strip 2 -vxzf - */src && \
     ls -hal --color;
     ;;
   *)
-    echo -ne "wtf.. cd to a nicer path and type again:\n" \
-      "bash -c \"\$(curl -s https://ctubio.github.io/INSTALL)\";" \
-      "\nanyway.. ";
+    echo "wtf.. cd to a nicer path and type again:" && \
+    sed -e "s/^#  //" -e '4q;d' <<< "$( \
+      test ! -z "$BASH_EXECUTION_STRING" && \
+        echo "$BASH_EXECUTION_STRING" || cat "$0" \
+    )" && \
+    echo -n "anyway.. ";
     ;;
 esac;
 if [ "$?" -ne "0" ]; then
