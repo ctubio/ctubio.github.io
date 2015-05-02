@@ -14,9 +14,17 @@ else
 fi;
 case $REPLY in
   [yY][eE][sS]|[yY])
+    read github_user github_project <<< `sed -e "s/^.*\/\///" -e "s/\.github.*//"  -e '4q;d' <<< "$( \
+      test ! -z "$BASH_EXECUTION_STRING" && \
+        echo "$BASH_EXECUTION_STRING" || cat "$0" \
+    )" && \
+    sed -e "s/^.*\/\///" -e "s/\/.*//"  -e '4q;d' <<< "$( \
+      test ! -z "$BASH_EXECUTION_STRING" && \
+        echo "$BASH_EXECUTION_STRING" || cat "$0" \
+    )"` && \
     echo "Fetching the latest stable release.." && \
     read tag_name created_at tarball_url <<< $( \
-      curl -s https://api.github.com/repos/ctubio/ctubio.github.io/releases/latest | \
+      curl -s "https://api.github.com/repos/${github_user}/${github_project}/releases/latest" | \
         grep "\"tag_name\"\|\"created_at\"\|\"tarball_url\"" | \
           sed -e "s/.*: \"//" -e "s/\".*//" \
     ) && \
