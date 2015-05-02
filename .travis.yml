@@ -14,6 +14,8 @@ before_install:
   - ls /home/travis/.rvm/gems/ruby-1.9.3-p551/bin/*
   - gem which bashcov
   - gem which bashcov-1.1.0
+  - bundle show bashcov bashcov
+  - bundle show bashcov bashcov-1.1.0
   - export PATH=$PATH:/home/travis/.rvm/gems/ruby-1.9.3-p551/bin
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
