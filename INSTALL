@@ -4,14 +4,14 @@
 #   bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
 ## How appropiate, you install like a cow.
 # but.. look behind you! a Three-Headed Monkey!
-if [ "$#" -ne "0" ]; then
-  echo "testing output";
-  exit;
-fi;
 echo -e "Yikes!\n" \
   "Let's install some initial files for your new project.\n" \
   "- Install path: ${PWD}";
-read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
+if [ "$#" -ne "0" ]; then
+  REPLY=`test "$1" = "--yes" && echo "y" || echo "n"`;
+else
+  read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
+fi;
 case $REPLY in
   [yY][eE][sS]|[yY])
     echo "Fetching the latest stable release.." && \

@@ -3,15 +3,15 @@ all: test
 test: INSTALL
 	@bats test/*.bats
 
-yes: clean INSTALL
+install-yes: clean INSTALL
 	@mkdir tmp
-	@cd tmp && ../INSTALL -y
+	@cd tmp && ../INSTALL --yes
 	@grep "" tmp/*
 	@make clean
 
-no: clean INSTALL
+install-no: clean INSTALL
 	@mkdir tmp
-	@cd tmp && ../INSTALL -n
+	@cd tmp && ../INSTALL --no
 	@make clean
 
 clean:
