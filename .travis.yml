@@ -11,7 +11,7 @@ before_install:
   - gem install bashcov-1.1.0.gem
   - gem list
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
-  - gem which bashcov-1.1.0
+  - whereis bashcov
   - bundle show bashcov
   - bundle show bashcov-1.1.0
   - export PATH=$PATH:/home/travis/.rvm/gems/ruby-1.9.3-p551/bin
