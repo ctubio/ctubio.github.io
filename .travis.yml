@@ -7,11 +7,14 @@ branches:
 before_install:
   - gem install coveralls
   - git clone --depth=50 --branch=master https://github.com/ctubio/bashcov /home/travis/ctubio/bashcov
-  - rvmsudo gem build /home/travis/ctubio/bashcov/bashcov.gemspec
-  - rvmsudo gem install bashcov-1.1.0.gem
+  - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
+  - gem install bashcov-1.1.0.gem
   - gem list
   - gem env
+  - ls -la /home/travis/.rvm/gems/*/bin
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
+  - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551@global/bin
+  - ls -la /home/travis/.rvm/rubies/ruby-1.9.3-p551/bin
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
