@@ -12,7 +12,8 @@ before_install:
   - sudo apt-get install -qq bats
 
 script:
-  - make coverage
+  - bashcov bats test/*.bats
+  - ls -la $TRAVIS_BUILD_DIR/coverage
   
 after_success:
   - coveralls
