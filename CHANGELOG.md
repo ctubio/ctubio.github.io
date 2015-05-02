@@ -1,5 +1,23 @@
 # Change Log
 
+## [Unreleased](https://github.com/ctubio/ctubio.github.io/tree/HEAD)
+
+[Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.3...HEAD)
+
+**Implemented enhancements:**
+
+- Use Makefile for common commands. [\#7](https://github.com/ctubio/ctubio.github.io/issues/7)
+
+- Report units test for bash scripts. [\#6](https://github.com/ctubio/ctubio.github.io/issues/6)
+
+- Report code coverage for bash scripts. [\#5](https://github.com/ctubio/ctubio.github.io/issues/5)
+
+**Fixed bugs:**
+
+- Replace dummy test units. [\#9](https://github.com/ctubio/ctubio.github.io/issues/9)
+
+- Make INSTALL script as abstract as possible. [\#4](https://github.com/ctubio/ctubio.github.io/issues/4)
+
 ## [v0.0.0.3](https://github.com/ctubio/ctubio.github.io/tree/v0.0.0.3) (2015-04-30)
 
 [Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.2...v0.0.0.3)
