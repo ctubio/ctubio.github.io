@@ -11,11 +11,13 @@ before_install:
   - gem install bashcov-1.1.0.gem
   - gem list
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
-  - ls -la /var/lib/gems
   - export PATH=$PATH:/home/travis/.rvm/gems/ruby-1.9.3-p551/bin
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
+  - locate bashcov
+  - sudo update-db
+  - locate bashcov
 
 script:
   - bashcov make test
