@@ -17,8 +17,7 @@ before_install:
   - sudo apt-get install -qq bats
 
 script:
-#  - bashcov make
-  - make
+  - bashcov make
   
 after_success:
   - coveralls
