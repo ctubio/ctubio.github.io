@@ -2,6 +2,6 @@
 
 @test "INSTALL dummy tests" {
   run ./INSTALL "test"
-  [ "$output" = "testing outpu" ]
+  [ "$output" = "testing output" ]
   [ "$status" -eq 0 ]
 }
