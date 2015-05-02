@@ -12,8 +12,8 @@ before_install:
   - gem list
   - gem env
   - gem query --local
-  - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
-  - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551@global/bin
+  - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551
+  - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551@global
   - export PATH=$PATH:/home/travis/.rvm/gems/ruby-1.9.3-p551@global/bin
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
