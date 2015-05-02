@@ -4,7 +4,7 @@ test: INSTALL
 	@bats test/*.bats
 
 coverage: INSTALL
-	@bashcov make test
+	@bashcov @make test
 
 yes: clean INSTALL
 	@mkdir tmp
