@@ -1,12 +1,11 @@
 language: bash
 
 before_install:
-  - bash --version
-  - make --version
-  - ruby --version
-  - gem --version
   - gem install coveralls
-  - gem install bashcov
+  - mkdir $TRAVIS_BUILD_DIR/tmp
+  - cd $TRAVIS_BUILD_DIR/tmp
+  - git clone https://github.com/ctubio/bashcov bashcov
+  - gem install $TRAVIS_BUILD_DIR/tmp/bashcov/bashcov.gem
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
