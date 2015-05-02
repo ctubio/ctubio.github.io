@@ -1,6 +1,7 @@
 language: bash
 
 before_install:
+  - rvm rubygems current
   - gem install coveralls
   - gem specific_install https://github.com/ctubio/bashcov
   - sudo add-apt-repository ppa:duggan/bats --yes
