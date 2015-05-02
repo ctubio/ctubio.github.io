@@ -3,6 +3,9 @@ all: test
 test: INSTALL
 	@bats test/*.bats
 
+coverage: INSTALL
+	@bashcov make test
+
 yes: clean INSTALL
 	@mkdir tmp
 	@cd tmp && ../INSTALL -y
