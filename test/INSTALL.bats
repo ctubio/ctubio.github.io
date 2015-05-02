@@ -12,6 +12,6 @@
   run ./INSTALL --yes
   [ "${lines[0]}" = "Yikes!" ]
   [ "${lines[1]}" = " Let's install some initial files for your new project." ]
-  [ "${lines[5]}" = "Downloading your new project files, please wait.." ]
+  [ "${lines[4]}" = "Downloading your new project files, please wait.." ]
   [ "$status" = 0 ]
 }
