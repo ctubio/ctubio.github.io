@@ -7,8 +7,8 @@
 }
 
 
-@test "INSTALL dummy tests" {
-  run ./INSTALL "test"
+@test "INSTALL dummy tests2" {
+  run ./INSTALL "test2"
   [ "$output" = "testing output" ]
   [ "$status" -eq 1 ]
 }
