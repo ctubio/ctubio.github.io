@@ -19,6 +19,7 @@ script:
   - bashcov make test
   
 after_success:
+  - cd $TRAVIS_BUILD_DIR
   - coveralls
 
 notifications:
