@@ -13,7 +13,6 @@ before_install:
 
 script:
   - make coverage
-  - cat $TRAVIS_BUILD_DIR/coverage/index.html
   
 after_success:
   - coveralls
