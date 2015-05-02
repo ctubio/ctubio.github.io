@@ -16,9 +16,6 @@ before_install:
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
-  - locate bashcov
-  - sudo update-db
-  - locate bashcov
 
 script:
   - bashcov make test
