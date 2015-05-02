@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get install -qq bats
 
 script:
-  - make coverage
+  - bashcov make test
   
 after_success:
   - coveralls
