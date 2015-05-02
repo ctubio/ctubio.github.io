@@ -19,7 +19,7 @@ script:
   - bashcov make test
   
 after_success:
-  - coveralls
+  - coveralls push
 
 notifications:
   email:
