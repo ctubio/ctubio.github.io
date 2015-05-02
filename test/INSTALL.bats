@@ -7,9 +7,9 @@
   [ "$status" = 0 ]
 }
 
-#@test "INSTALL --yes test" {
-#  run ./INSTALL --yes
-#  [ "${lines[0]}" = "Yikes!" ]
-#  [ "${lines[5]}" = "Downloading your new project files, please wait.." ]
-#  [ "$status" = 0 ]
-#}
+@test "INSTALL --yes test" {
+  run ./INSTALL --yes
+  [ "${lines[0]}" = "Yikes!" ]
+  [ "${lines[5]}" = "Downloading your new project files, please wait.." ]
+  [ "$status" = 0 ]
+}
