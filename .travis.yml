@@ -2,6 +2,8 @@ language: bash
 before_install:
   - bash --version
   - make --version
+  - ruby --version
+  - gem --version
   - gem install bashcov
   - gem install coveralls
   - sudo add-apt-repository ppa:duggan/bats --yes
