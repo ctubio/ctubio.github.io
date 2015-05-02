@@ -10,12 +10,9 @@ before_install:
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
-  - pip install coverage
 
 script:
   - make coverage
-  - cat $TRAVIS_BUILD_DIR/coverage/index.html
-  - coverage report -m
   - cat $TRAVIS_BUILD_DIR/coverage/index.html
   
 after_success:
