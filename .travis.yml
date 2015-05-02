@@ -5,14 +5,12 @@ branches:
     - master
     
 before_install:
-  - rvm rubygems current
   - gem install coveralls
   - git clone --depth=50 --branch=master https://github.com/ctubio/bashcov /home/travis/ctubio/bashcov
   - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
   - gem install bashcov-1.1.0.gem
   - ls /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
   - ls /home/travis/.rvm/gems/ruby-1.9.3-p551/bin/*
-  - gem which bashcov
   - gem which bashcov-1.1.0
   - bundle show bashcov bashcov
   - bundle show bashcov bashcov-1.1.0
