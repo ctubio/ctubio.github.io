@@ -11,7 +11,7 @@ before_install:
   - gem install bashcov-1.1.0.gem
   - gem list
   - gem env
-  - gem query --local
+  - ls -la /home/travis/.rvm/gems
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551@global
   - export PATH=$PATH:/home/travis/.rvm/gems/ruby-1.9.3-p551@global/bin
