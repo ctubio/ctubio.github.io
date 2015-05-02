@@ -10,7 +10,6 @@ before_install:
   - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
   - gem install bashcov-1.1.0.gem
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
-  - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin/*
   - gem which bashcov-1.1.0
   - bundle show bashcov
   - bundle show bashcov-1.1.0
