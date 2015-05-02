@@ -1,2 +1,5 @@
-# Backup files
+# backup files
 *.bk
+
+# tmp path
+/tmp
