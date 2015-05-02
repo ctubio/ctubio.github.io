@@ -5,8 +5,8 @@ before_install:
   - make --version
   - ruby --version
   - gem --version
-  - gem install bashcov
   - gem install coveralls
+  - gem install bashcov
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
