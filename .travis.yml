@@ -5,12 +5,12 @@ before_install:
   - make --version
   - ruby --version
   - gem --version
-  - beep --version
   - gem install bashcov
   - gem install coveralls
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
+  - sudo apt-get install beep
   - beep -f 1000 -n -f 1500 -n -f 600 -n -f 500 -n -f 100 -r 2 -l 10 -n -f 50 -r 2 -l 200 -n -f 40 -r 2 -l 300 -n -f 60 -r 3 -n -f 50 -r 3
 
 script:
@@ -19,4 +19,3 @@ script:
 notifications:
   email:
     on_success: never
-    
