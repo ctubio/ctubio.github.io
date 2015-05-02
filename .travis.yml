@@ -12,8 +12,8 @@ before_install:
   - sudo apt-get install -qq bats
 
 script:
-  - bats test/*.bats
-  - bashcov bats test/*.bats
+  - echo $PWD
+  - make coverage
   - cat $TRAVIS_BUILD_DIR/coverage/index.html
   
 after_success:
