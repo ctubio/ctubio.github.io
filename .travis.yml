@@ -3,8 +3,7 @@ language: bash
 before_install:
   - gem install coveralls
   - mkdir $TRAVIS_BUILD_DIR/tmp
-  - cd $TRAVIS_BUILD_DIR/tmp
-  - git clone https://github.com/ctubio/bashcov bashcov
+  - git clone --depth=50 --branch=master https://github.com/ctubio/bashcov $TRAVIS_BUILD_DIR/tmp/bashcov
   - gem install $TRAVIS_BUILD_DIR/tmp/bashcov/bashcov.gem
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
