@@ -9,6 +9,7 @@ before_install:
   - git clone --depth=50 --branch=master https://github.com/ctubio/bashcov /home/travis/ctubio/bashcov
   - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
   - gem install bashcov-1.1.0.gem
+  - gem list
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
   - gem which bashcov-1.1.0
   - bundle show bashcov
