@@ -10,6 +10,7 @@ before_install:
   - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
   - gem install bashcov-1.1.0.gem
   - gem list
+  - gem env
   - ls -la /home/travis/.rvm/gems/ruby-1.9.3-p551/bin
   - export PATH=$PATH:/home/travis/.rvm/gems/ruby-1.9.3-p551/bin
   - sudo add-apt-repository ppa:duggan/bats --yes
