@@ -1,8 +1,8 @@
 # Change Log
 
-## [Unreleased](https://github.com/ctubio/ctubio.github.io/tree/HEAD)
+## [v0.0.0.4](https://github.com/ctubio/ctubio.github.io/tree/v0.0.0.4) (2015-05-02)
 
-[Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.3...HEAD)
+[Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.3...v0.0.0.4)
 
 **Implemented enhancements:**
 
