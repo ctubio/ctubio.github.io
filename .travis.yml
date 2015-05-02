@@ -13,7 +13,7 @@ before_install:
 
 script:
   - bashcov bats test/*.bats
-  - cat $TRAVIS_BUILD_DIR/coverage/*
+  - cat $TRAVIS_BUILD_DIR/coverage/index.html
   
 after_success:
   - coveralls
