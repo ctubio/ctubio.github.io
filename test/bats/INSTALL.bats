@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 @test "INSTALL dummy tests" {
-  run echo "2"
-  [ "$output" = "2" ]
+  run INSTALL "test"
+  [ "$output" = "testing output" ]
   [ "$status" -eq 0 ]
 }
