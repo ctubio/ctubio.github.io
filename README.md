@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ctubio/ctubio.github.io.svg?branch=master)](https://travis-ci.org/ctubio/ctubio.github.io)
+[![Coverage Status](https://coveralls.io/repos/ctubio/ctubio.github.io/badge.svg)](https://coveralls.io/r/ctubio/ctubio.github.io)
 [![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/issues)
 [![Software License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Latest Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/releases/latest)
