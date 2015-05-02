@@ -5,7 +5,7 @@ branches:
     - master
     
 before_install:
-  - gem install coveralls
+#  - gem install coveralls
   - git clone --depth=50 --branch=master https://github.com/ctubio/bashcov /home/travis/ctubio/bashcov
   - cd /home/travis/ctubio/bashcov
   - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
@@ -19,7 +19,7 @@ script:
   - bashcov make test
   
 after_success:
-  - coveralls push
+  - coveralls
 
 notifications:
   email:
