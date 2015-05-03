@@ -8,7 +8,7 @@
 [ctubio.github.io](https://ctubio.github.io) is a mighty installer
 that provides a few [common files](src) for *new* or *orphan* projects.
 
-## Installing via Bash/Curl
+## Installing all *common files* via Bash/Curl in a swish (hold tight!)
 
 You can quickly download all [common files](src) into the root
 directory of your project (or any other local path of your machine)
