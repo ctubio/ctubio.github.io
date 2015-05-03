@@ -2,6 +2,7 @@
 
 @test "INSTALL --no test" {
   run make install-no
+echo "-${lines[0]}-" > aa
   [ "${lines[0]}" = "Yikes!" ]
   [ "${lines[1]}" = " Let's install some initial files for your new project." ]
   [ "${lines[5]}" = "anyway.. all done.. Thank you!" ]

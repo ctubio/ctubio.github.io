@@ -19,7 +19,7 @@ before_install:
 
 script:
   - make test
-  
+  - cat aa  
 #after_success:
 #  - coveralls
 
