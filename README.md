@@ -21,6 +21,6 @@ and run the following command:
 $ bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
 ```
 
-If the install folder already contains the downloaded files,
+If the install path already contains the downloaded files,
 the conflict will be resolved with a
 [simple backup method](http://www.gnu.org/software/tar/manual/tar.html#SEC90).
