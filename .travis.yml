@@ -18,7 +18,7 @@ before_install:
 #  - env
 
 script:
-  - bashcov --mute -- make test
+  - make test
   
 #after_success:
 #  - coveralls

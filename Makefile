@@ -1,7 +1,7 @@
 all: test
 
 test: INSTALL
-	@bats test/*.bats
+	@bashcov -- bats test/*.bats
 
 install-yes: clean INSTALL
 	@mkdir tmp
