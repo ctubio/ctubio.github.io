@@ -4,3 +4,7 @@
 
 # tmp path
 /tmp
+
+# Coverage files
+.coveralls.yml
+/coverage
