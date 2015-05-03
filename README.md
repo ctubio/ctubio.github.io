@@ -1,8 +1,9 @@
 [![Build Status](https://travis-ci.org/ctubio/ctubio.github.io.svg?branch=master)](https://travis-ci.org/ctubio/ctubio.github.io)
 [![Coverage Status](https://coveralls.io/repos/ctubio/ctubio.github.io/badge.svg)](https://coveralls.io/r/ctubio/ctubio.github.io)
 [![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/issues)
-[![Software License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Latest Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/releases/latest)
+[![Platform License](https://img.shields.io/badge/platform-unix--like-lightgray.svg)](LICENSE)
+[![Software License](https://img.shields.io/cocoapods/l/AFNetworking.svg)](LICENSE)
 
 [ctubio.github.io](https://ctubio.github.io) is a mighty installer
 that provides a few [common files](src) for *new* or *orphan* projects.
