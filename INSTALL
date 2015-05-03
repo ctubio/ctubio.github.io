@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # BEGIN of INSTALL file, mighty installer.
 # runs from any path at your machine, just type in your tty:
 #   bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
