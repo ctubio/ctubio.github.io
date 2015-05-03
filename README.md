@@ -8,11 +8,11 @@
 [ctubio.github.io](https://ctubio.github.io) is a mighty installer
 that provides a few [common files](src) for *new* or *orphan* projects.
 
-## Installing all *common files* via Bash/Curl in a swish (hold tight!)
+## Installing all *common files* via Bash/Curl in a swish
 
-You can quickly download all [common files](src) into the root
-directory of your project (or any other local path of your machine)
-using the [INSTALL](INSTALL) script remotely over https.
+Hold tight yourself, because you can quickly download all [common files](src)
+into the root directory of your project (or any other local path of your
+machine) using the [INSTALL](INSTALL) script remotely over https.
 
 Open your tty, `mkdir` and/or `cd` into your new/orphan project
 and run the following command:
