@@ -12,7 +12,7 @@ that provides a few [common files](src) for *new* or *orphan* projects.
 
 Hold tight, because you can quickly download all [common files](src)
 into the root directory of your project (or any other local path of your
-machine) using the [INSTALL](INSTALL) script remotely over https.
+machine), using the [INSTALL](INSTALL) script remotely over https.
 
 Face your tty, `mkdir` and/or `cd` into your new/orphan project
 and run the following command:
