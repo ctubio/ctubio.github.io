@@ -18,8 +18,8 @@ before_install:
 #  - env
 
 script:
-  - make test
-  - cat aa  
+  - make --no-print-directory
+
 #after_success:
 #  - coveralls
 
