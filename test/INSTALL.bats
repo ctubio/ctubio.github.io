@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 @test "INSTALL --no test" {
-  run ./INSTALL --no
+  run make install-no
   [ "${lines[0]}" = "Yikes!" ]
   [ "${lines[1]}" = " Let's install some initial files for your new project." ]
   [ "${lines[5]}" = "anyway.. all done.. Thank you!" ]
@@ -9,7 +9,7 @@
 }
 
 @test "INSTALL --yes test" {
-  run ./INSTALL --yes
+  run make install-yes
   [ "${lines[0]}" = "Yikes!" ]
   [ "${lines[1]}" = " Let's install some initial files for your new project." ]
   [ "${lines[5]}" = "!Downloading your new project files, please wait.." ]
