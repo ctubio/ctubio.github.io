@@ -20,8 +20,8 @@ before_install:
 script:
   - bashcov make test
   
-#after_success:
-#  - coveralls
+after_success:
+  - coveralls
 
 notifications:
   email:
