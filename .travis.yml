@@ -17,8 +17,7 @@ before_install:
   - sudo apt-get install -qq bats
 
 script:
-  - make
-  - echo $?
+  - make; echo $?
 
 notifications:
   email:
