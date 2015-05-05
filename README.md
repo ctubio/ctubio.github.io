@@ -1,6 +1,6 @@
 [![Stable Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg?label=stable%20release)](https://github.com/ctubio/ctubio.github.io/releases/latest)
 [![Platform License](https://img.shields.io/badge/platform-unix--like-lightgray.svg)](https://www.gnu.org/)
-[![Software License](https://img.shields.io/cocoapods/l/AFNetworking.svg)](LICENSE)
+[![Software License](http://static.porncode.org/license/LICENSE-MIT.svg)](LICENSE)
 
 [![Latest Tag](https://img.shields.io/github/tag/ctubio/ctubio.github.io.svg?label=latest%20tag)](https://github.com/ctubio/ctubio.github.io/tags)
 [![Build Status](https://img.shields.io/travis/ctubio/ctubio.github.io/master.svg)](https://travis-ci.org/ctubio/ctubio.github.io)
