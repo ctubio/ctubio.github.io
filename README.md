@@ -1,8 +1,8 @@
-[![Stable Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg?label=release)](https://github.com/ctubio/ctubio.github.io/releases/latest)
+[![Stable Release](https://img.shields.io/github/release/ctubio/ctubio.github.io.svg?label=stable%20release)](https://github.com/ctubio/ctubio.github.io/releases/latest)
 [![Platform License](https://img.shields.io/badge/platform-unix--like-lightgray.svg)](LICENSE)
 [![Software License](https://img.shields.io/cocoapods/l/AFNetworking.svg)](LICENSE)
 
-[![Latest Tag](https://img.shields.io/github/tag/ctubio/ctubio.github.io.svg?label=tag)](https://github.com/ctubio/ctubio.github.io/tag/latest)
+[![Latest Tag](https://img.shields.io/github/tag/ctubio/ctubio.github.io.svg?label=latest%20tag)](https://github.com/ctubio/ctubio.github.io/tag/latest)
 [![Build Status](https://img.shields.io/travis/ctubio/ctubio.github.io/master.svg)](https://travis-ci.org/ctubio/ctubio.github.io)
 [![Coverage Status](https://img.shields.io/coveralls/ctubio/ctubio.github.io/master.svg)](https://coveralls.io/r/ctubio/ctubio.github.io?branch=master)
 [![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/issues)
