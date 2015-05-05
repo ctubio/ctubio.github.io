@@ -3,8 +3,8 @@
 [![Software License](https://img.shields.io/cocoapods/l/AFNetworking.svg)](LICENSE)
 
 [![Latest Tag](https://img.shields.io/github/tag/ctubio/ctubio.github.io.svg?label=tag)](https://github.com/ctubio/ctubio.github.io/tag/latest)
-[![Build Status](https://travis-ci.org/ctubio/ctubio.github.io.svg?branch=master)](https://travis-ci.org/ctubio/ctubio.github.io)
-[![Coverage Status](https://coveralls.io/repos/ctubio/ctubio.github.io/badge.svg?branch=master)](https://coveralls.io/r/ctubio/ctubio.github.io?branch=master)
+[![Build Status](https://img.shields.io/travis/ctubio/ctubio.github.io/master.svg)](https://travis-ci.org/ctubio/ctubio.github.io)
+[![Coverage Status](https://img.shields.io/coveralls/ctubio/ctubio.github.io/master.svg)](https://coveralls.io/r/ctubio/ctubio.github.io?branch=master)
 [![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/issues)
 
 [ctubio.github.io](https://ctubio.github.io) is a mighty installer
