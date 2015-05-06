@@ -6,7 +6,7 @@
 [![Build Status](https://img.shields.io/travis/ctubio/ctubio.github.io/master.svg)](https://travis-ci.org/ctubio/ctubio.github.io)
 [![Coverage Status](https://img.shields.io/coveralls/ctubio/ctubio.github.io/master.svg)](https://coveralls.io/r/ctubio/ctubio.github.io?branch=master)
 [![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/issues)
-[![GITTER Chat](https://img.shields.io/badge/gitter-join%20chat-1dce73.svg)](https://gitter.im/ctubio/ctubio.github.io)
+[![GITTER Archives](https://img.shields.io/badge/gitter-archives-1dce73.svg)](https://gitter.im/ctubio/ctubio.github.io/archives/all)
 
 [ctubio.github.io](https://ctubio.github.io) is a mighty installer
 that provides a few [common files](src) for *new* or *orphan* projects.
