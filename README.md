@@ -6,8 +6,8 @@
 that provides a few [common files](src) for *new* or *orphan* projects.
 
 [![Latest Tag](https://img.shields.io/github/tag/ctubio/ctubio.github.io.svg?label=latest%20tag)](https://github.com/ctubio/ctubio.github.io/tags)
-[![Build Status](https://img.shields.io/travis/ctubio/ctubio.github.io/master.svg)](https://travis-ci.org/ctubio/ctubio.github.io)
-[![Coverage Status](https://img.shields.io/coveralls/ctubio/ctubio.github.io/master.svg)](https://coveralls.io/r/ctubio/ctubio.github.io?branch=master)
+[![Build Status](https://img.shields.io/travis/ctubio/ctubio.github.io/master.svg?label=test%20suite)](https://travis-ci.org/ctubio/ctubio.github.io)
+[![Coverage Status](https://img.shields.io/coveralls/ctubio/ctubio.github.io/master.svg?label=code%20coverage)](https://coveralls.io/r/ctubio/ctubio.github.io?branch=master)
 [![Open Issues](https://img.shields.io/github/issues/ctubio/ctubio.github.io.svg)](https://github.com/ctubio/ctubio.github.io/issues)
 [![Chat Archives](https://img.shields.io/badge/chat-archives-1dce73.svg)](https://gitter.im/ctubio/ctubio.github.io/archives/all)
 
