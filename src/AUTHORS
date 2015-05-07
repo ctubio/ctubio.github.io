@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-echo -n "`head -n 3 $0 && git log --format='### %aN <%aE>' | grep noreply | uniq | sort -f`" > $0;
-## AUTHORS and Monkeys:
+echo "`head -n 3 $0 && git log --format='### %aN <%aE>' | grep noreply | uniq | sort -f`" > $0;
+## AUTHORS of ctubio.github.io:
+### Carles Tubio <ctubio@users.noreply.github.com>
