@@ -7,12 +7,12 @@ install-yes: clean INSTALL
 	@mkdir tmp
 	@cd tmp && ../INSTALL --yes
 	@grep "" tmp/*
-	@make clean
+	@make clean --no-print-directory
 
 install-no: clean INSTALL
 	@mkdir tmp
 	@cd tmp && ../INSTALL --no
-	@make clean
+	@make clean --no-print-directory
 
 clean:
 	@rm -rf tmp
