@@ -7,9 +7,37 @@
 echo -e "Yikes!\n" \
   "Let's install some initial files for your new project.\n" \
   "- Install path: ${PWD}";
-if [ "$#" -ne "0" ]; then
-  REPLY=`test "$1" = "--yes" && echo "y" || echo "n"`;
-else
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--help") set -- "$@" "-h" ;;
+    "--yes")  set -- "$@" "-y" ;;
+    "--no")   set -- "$@" "-n" ;;
+    *)        set -- "$@" "$arg"
+  esac
+done
+REPLY='manual';
+OPTIND=1
+while getopts ":hyn" opt; do
+  case "$opt" in
+    h)
+      echo "Usage: .." >&2;
+      exit;
+      ;;
+    y) REPLY='y' ;;
+    n) REPLY='n' ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2;
+      exit 1;
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2;
+      exit 1;
+      ;;
+  esac
+done
+shift $(expr $OPTIND - 1)
+if [ "${REPLY}" = "manual" ]; then
   read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
 fi;
 SOURCE="$(test ! -z "$BASH_EXECUTION_STRING" && echo "$BASH_EXECUTION_STRING" || grep "" $0)";

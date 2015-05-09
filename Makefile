@@ -6,7 +6,7 @@ test: INSTALL
 install-yes: clean INSTALL
 	@mkdir tmp
 	@cd tmp && ../INSTALL --yes
-	@grep "" tmp/*
+	@test -e tmp/* && grep "" tmp/*
 	@make clean --no-print-directory
 
 install-no: clean INSTALL
