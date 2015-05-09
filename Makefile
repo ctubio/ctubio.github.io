@@ -2,7 +2,7 @@ all: test
 
 test: INSTALL
 #	@bashcov -- bats test/*.bats
-	@kcov --coveralls-id=$TRAVIS_JOB_ID coverage bats test
+	@kcov --coveralls-id=\$TRAVIS_JOB_ID coverage bats test
 install-yes: clean INSTALL
 	@mkdir tmp
 	@cd tmp && ../INSTALL --yes
