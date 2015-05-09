@@ -10,14 +10,17 @@ before_install:
 #  - gem build /home/travis/ctubio/bashcov/bashcov.gemspec
 #  - gem install bashcov-*.gem
 #  - cd $TRAVIS_BUILD_DIR
-  - gem install bashcov
+#  - gem install bashcov
   - gem install coveralls
+  - sudo apt-get install kcov
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
 
 script:
   - make
+  - ls -la .
+  - ls -la coverage
 
 notifications:
   email:
