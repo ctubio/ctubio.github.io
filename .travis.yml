@@ -18,8 +18,8 @@ before_install:
 
 script:
   - make
-  - ls -la .
-  - ls -la coverage
+#  - ls -la .
+#  - ls -la coverage
 
 notifications:
   email:
