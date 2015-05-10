@@ -28,6 +28,17 @@ If the install path already contains the downloaded files,
 the conflict will be resolved with a
 [simple backup method](http://www.gnu.org/software/tar/manual/tar.html#SEC90).
 
+## Strengthening rule *#2) Think before you type.*
+
+Before download or install any file, you will be prompted:
+```bash
+Yikes!
+Let's install some initial files for your new project.
+ - Install path: /your/current/working/directory
+Are you sure? [y/N]
+>
+```
+
 ## Help?
 
 ```bash
