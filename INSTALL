@@ -16,7 +16,7 @@ for arg in "$@"; do
 done
 REPLY="manual";
 OPTIND=1;
-while getopts ":hyn" opt; do
+while getopts ":ynh" opt; do
   case "$opt" in
     y) REPLY='y' ;;
     n) REPLY='n' ;;
