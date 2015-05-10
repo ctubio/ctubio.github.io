@@ -18,8 +18,7 @@ REPLY="manual";
 OPTIND=1;
 while getopts ":ynh" opt; do
   case "$opt" in
-    y) REPLY='y' ;;
-    n) REPLY='n' ;;
+    y|n) REPLY="$opt" ;;
     h|\?|:)
       test ! -z "$OPTARG" && echo "Error: invalid option: -$OPTARG";
       test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG." >&2;
