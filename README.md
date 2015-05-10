@@ -30,7 +30,7 @@ the conflict will be resolved with a
 
 ## Strengthening rule *#2) Think before you type.*
 
-Before download or install any file, you will be prompted:
+After running the command above, and before download or install any file, you will be prompted:
 ```
 Yikes!
 Let's install some initial files for your new project.
@@ -41,6 +41,7 @@ Are you sure? [y/N]
 
 ## Help?
 
+Yes, Sir/Milady.
 ```bash
 $ bash -c "$(curl -s http://ctubio.github.io/INSTALL)" -- --help
 ```
