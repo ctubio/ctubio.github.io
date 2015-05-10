@@ -9,6 +9,7 @@
 }
 
 @test "INSTALL --yes test" {
+  skip "known bug of projects without releases (#14)"
   run make --no-print-directory install-yes
   [ "${lines[0]}" = "Yikes!" ]
   [ "${lines[1]}" = "Let's install some initial files for your new project." ]
@@ -35,8 +36,24 @@
 @test "INSTALL -x test" {
   run ./INSTALL -x
   [ "${lines[0]}" = "Yikes!" ]
-  [ "${lines[1]}" = "Error: invalid option: -x" ]
+  [ "${lines[1]}" = "Invalid option: -x" ]
   [ "${lines[2]}" = "Usage: INSTALL [option]" ]
   [ "${lines[3]}" = "Options:" ]
   [ "$status" = 1 ]
+}
+
+@test "INSTALL --xx test" {
+  run ./INSTALL --xx
+  [ "${lines[0]}" = "Yikes!" ]
+  [ "${lines[1]}" = "Invalid option: --xx" ]
+  [ "${lines[2]}" = "Usage: INSTALL [option]" ]
+  [ "${lines[3]}" = "Options:" ]
+  [ "$status" = 1 ]
+}
+
+@test "INSTALL --version test" {
+  run ./INSTALL --version
+  [ "${lines[0]}" = "Yikes!" ]
+  [[ "${lines[1]}" =~ "INSTALL v" ]]
+  [ "$status" = 0 ]
 }
