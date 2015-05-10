@@ -21,7 +21,6 @@ while getopts ":hyn" opt; do
     y) REPLY='y' ;;
     n) REPLY='n' ;;
     h|\?|:)
-    echo "$OPTARG.$opt";
       test ! -z "$OPTARG" && echo "Error: invalid option: -$OPTARG";
       test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG." >&2;
       echo "Usage: INSTALL [option]";
