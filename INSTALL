@@ -4,9 +4,7 @@
 #   bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
 ## How appropiate, you install like a cow.
 # but.. look behind you! a Three-Headed Monkey!
-echo -e "Yikes!\n" \
-  "Let's install some initial files for your new project.\n" \
-  "- Install path: ${PWD}";
+echo "Yikes!";
 for arg in "$@"; do
   shift
   case "$arg" in
@@ -17,26 +15,28 @@ for arg in "$@"; do
   esac
 done
 REPLY='manual';
-OPTIND=1
+OPTIND=1;
 while getopts ":hyn" opt; do
   case "$opt" in
-    h)
-      echo "Usage: .." >&2;
-      exit;
-      ;;
     y) REPLY='y' ;;
     n) REPLY='n' ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2;
-      exit 1;
-      ;;
-    :)
-      echo "Option -$OPTARG requires an argument." >&2;
-      exit 1;
+    h|\?|:)
+    echo "$OPTARG.$opt";
+      test ! -z "$OPTARG" && echo "Error: invalid option: -$OPTARG";
+      test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG." >&2;
+      echo "Usage: INSTALL [option]";
+      echo "Options:";
+      echo -e " -h, --help\tShow this very same text.\n" \
+        "-y, --yes\tAuto-reply \"yes\" on install.\n" \
+        "-n, --no\tAuto-reply \"no\" on install." \ | sed "s/^/ /";
+      test -z "$OPTARG";
+      exit $?;
       ;;
   esac
 done
-shift $(expr $OPTIND - 1)
+shift $(expr $OPTIND - 1);
+echo -e "Let's install some initial files for your new project.\n" \
+  "- Install path: ${PWD}";
 if [ "${REPLY}" = "manual" ]; then
   read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
 fi;
