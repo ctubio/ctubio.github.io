@@ -7,10 +7,11 @@
 echo "Yikes!";
 usage () {
   echo -e "Usage: INSTALL [option]\nOptions:" && \
-  sed -e "s/^ */  /" <<< "$(echo -e \
-    "-y, --yes\tAuto-reply \"yes\" on install.\n" \
-    "-n, --no\tAuto-reply \"no\" on install.\n" \
-    "-h, --help\tShow this very same text." \
+  sed -e "s/^ *-/  -/" -e "s/^ *--/      --/" <<< "$(echo -e \
+    "-y, --yes\tAuto-reply \"yes\" on install and install src files.\n" \
+    "-n, --no\tAuto-reply \"no\" on install and quit.\n" \
+    "-h, --help\tShow this very same text and quit.\n" \
+    "--version\tShow current version number and quit." \
   )";
 }
 SOURCE="$(test ! -z "$BASH_EXECUTION_STRING" && echo "$BASH_EXECUTION_STRING" || grep "" $0)";
@@ -36,9 +37,8 @@ while getopts ":ynh" opt; do
   case "$opt" in
     y|n) REPLY="$opt" ;;
     h|\?|:)
-      test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG." >&2;
-      usage;
-      test -z "$OPTARG";
+      test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG.";
+      usage && test -z "$OPTARG";
       exit $?;
       ;;
     *)

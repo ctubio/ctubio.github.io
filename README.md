@@ -21,9 +21,22 @@ Face your tty, `mkdir` and/or `cd` into your new/orphan project,
 and run the following command:
 
 ``` bash
-$ bash -c "$(curl -s https://ctubio.github.io/INSTALL)";
+$ bash -c "$(curl -s https://ctubio.github.io/INSTALL)"
 ```
 
 If the install path already contains the downloaded files,
 the conflict will be resolved with a
 [simple backup method](http://www.gnu.org/software/tar/manual/tar.html#SEC90).
+
+## Help?
+
+```bash
+$ bash -c "$(curl -s http://ctubio.github.io/INSTALL)" -- --help
+Yikes!
+Usage: INSTALL [option]
+Options:
+  -y, --yes     Auto-reply "yes" on install and install src files.
+  -n, --no      Auto-reply "no" on install and quit.
+  -h, --help    Show this very same text and quit.
+      --version Show current version number and quit.
+```
