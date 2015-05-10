@@ -31,7 +31,7 @@ the conflict will be resolved with a
 ## Strengthening rule *#2) Think before you type.*
 
 Before download or install any file, you will be prompted:
-```bash
+```
 Yikes!
 Let's install some initial files for your new project.
  - Install path: /your/current/working/directory
@@ -43,6 +43,8 @@ Are you sure? [y/N]
 
 ```bash
 $ bash -c "$(curl -s http://ctubio.github.io/INSTALL)" -- --help
+```
+```
 Yikes!
 Usage: INSTALL [option]
 Options:
