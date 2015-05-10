@@ -34,7 +34,7 @@ Let's install some initial files for your new project.
 Are you sure? [y/N]
 >
 ```
-### What if..
+### but, What if..
 ####..the install path already contains the downloaded files?
 The conflict will be resolved with a
 [simple backup method](http://www.gnu.org/software/tar/manual/tar.html#SEC90).
