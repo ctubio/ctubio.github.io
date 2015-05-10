@@ -4,6 +4,14 @@
 
 [Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.5...v0.0.0.6)
 
+**Implemented enhancements:**
+
+- Show usage text in README somehow. [\#22](https://github.com/ctubio/ctubio.github.io/issues/22)
+
+- Support GNU-style long options \(--myoption\) ans short options \(-m\). [\#21](https://github.com/ctubio/ctubio.github.io/issues/21)
+
+- Include --version and --help options. [\#20](https://github.com/ctubio/ctubio.github.io/issues/20)
+
 **Fixed bugs:**
 
 - Fix false positive builds in travis. [\#12](https://github.com/ctubio/ctubio.github.io/issues/12)
