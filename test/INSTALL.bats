@@ -15,3 +15,19 @@
   [ "${lines[5]}" = "Downloading your new project files, please wait.." ]
   [ "$status" = 0 ]
 }
+
+@test "INSTALL --help test" {
+  run INSTALL --help
+  [ "${lines[0]}" = "Yikes!" ]
+  [ "${lines[1]}" = "Usage: INSTALL [option]" ]
+  [ "${lines[2]}" = "Options:" ]
+  [ "$status" = 0 ]
+}
+
+@test "INSTALL -x test" {
+  [ "${lines[0]}" = "Yikes!" ]
+  [ "${lines[1]}" = "Error: invalid option: -x" ]
+  [ "${lines[2]}" = "Usage: INSTALL [option]" ]
+  [ "${lines[3]}" = "Options:" ]
+  [ "$status" = 1 ]
+}
