@@ -11,7 +11,7 @@ for arg in "$@"; do
     "--yes")  set -- "$@" "-y" ;;
     "--no")   set -- "$@" "-n" ;;
     "--help") set -- "$@" "-h" ;;
-    *)        set -- "$@" "$arg"
+    *)        set -- "$@" "$arg" ;;
   esac
 done
 REPLY="manual";
@@ -23,12 +23,12 @@ while getopts ":hyn" opt; do
     h|\?|:)
       test ! -z "$OPTARG" && echo "Error: invalid option: -$OPTARG";
       test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG." >&2;
-      echo "Usage: INSTALL [option]";
-      echo "Options:";
-      echo -e " -h, --help\tShow this very same text.\n" \
+      echo -e "Usage: INSTALL [option]\nOptions:" && \
+      sed -e "s/^ */  /" <<< "$(echo -e \
+        "-h, --help\tShow this very same text.\n" \
         "-y, --yes\tAuto-reply \"yes\" on install.\n" \
-        "-n, --no\tAuto-reply \"no\" on install." \ | sed "s/^/ /";
-      test -z "$OPTARG";
+        "-n, --no\tAuto-reply \"no\" on install." \
+      )" && test -z "$OPTARG";
       exit $?;
       ;;
   esac
