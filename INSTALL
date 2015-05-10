@@ -5,13 +5,29 @@
 ## How appropiate, you install like a cow.
 # but.. look behind you! a Three-Headed Monkey!
 echo "Yikes!";
+usage () {
+  echo -e "Usage: INSTALL [option]\nOptions:" && \
+  sed -e "s/^ */  /" <<< "$(echo -e \
+    "-y, --yes\tAuto-reply \"yes\" on install.\n" \
+    "-n, --no\tAuto-reply \"no\" on install.\n" \
+    "-h, --help\tShow this very same text." \
+  )";
+}
+SOURCE="$(test ! -z "$BASH_EXECUTION_STRING" && echo "$BASH_EXECUTION_STRING" || grep "" $0)";
 for arg in "$@"; do
   shift
   case "$arg" in
-    "--yes")  set -- "$@" "-y" ;;
-    "--no")   set -- "$@" "-n" ;;
-    "--help") set -- "$@" "-h" ;;
-    *)        set -- "$@" "$arg" ;;
+    "--yes" |"-y") set -- "$@" "-y" ;;
+    "--no"  |"-n") set -- "$@" "-n" ;;
+    "--help"|"-h") set -- "$@" "-h" ;;
+    "--version")
+      echo -n "INSTALL v" && test ! -z "$BASH_EXECUTION_STRING" && curl -s "$( \
+        sed -e "s/.*-s //" -e "s/INSTALL.*//" -e '4q;d' <<< "${SOURCE}" \
+      )VERSION" || grep "" VERSION;
+      exit;
+      ;;
+    -*) set -- "$@" "$arg" && echo "Invalid option: $arg" ;;
+    *) set -- "$@" "$arg" ;;
   esac
 done
 REPLY="manual";
@@ -20,25 +36,25 @@ while getopts ":ynh" opt; do
   case "$opt" in
     y|n) REPLY="$opt" ;;
     h|\?|:)
-      test ! -z "$OPTARG" && echo "Error: invalid option: -$OPTARG";
       test "$opt" = ":" && echo "Error: missing required argument in option -$OPTARG." >&2;
-      echo -e "Usage: INSTALL [option]\nOptions:" && \
-      sed -e "s/^ */  /" <<< "$(echo -e \
-        "-h, --help\tShow this very same text.\n" \
-        "-y, --yes\tAuto-reply \"yes\" on install.\n" \
-        "-n, --no\tAuto-reply \"no\" on install." \
-      )" && test -z "$OPTARG";
+      usage;
+      test -z "$OPTARG";
       exit $?;
       ;;
+    *)
   esac
 done
 shift $(expr $OPTIND - 1);
+if [[ -n "$@" ]]; then
+  echo "Invalid arguments: $@";
+  usage;
+  exit 1;
+fi;
 echo -e "Let's install some initial files for your new project.\n" \
   "- Install path: ${PWD}";
 if [ "${REPLY}" = "manual" ]; then
   read -p "Are you sure? [y/N] `echo $'\n> '`" -n 1 -r && echo;
 fi;
-SOURCE="$(test ! -z "$BASH_EXECUTION_STRING" && echo "$BASH_EXECUTION_STRING" || grep "" $0)";
 case $REPLY in
   [yY][eE][sS]|[yY])
     read github_user github_project <<< `\
