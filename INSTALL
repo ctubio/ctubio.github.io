@@ -8,7 +8,7 @@ echo "Yikes!";
 usage () {
   echo -e "Usage: INSTALL [option]\nOptions:" && \
   sed -e "s/^ *-/  -/" -e "s/^ *--/      --/" <<< "$(echo -e \
-    "-y, --yes\tAuto-reply \"yes\" on install and install src files.\n" \
+    "-y, --yes\tAuto-reply \"yes\" on install and install src files in \$PWD.\n" \
     "-n, --no\tAuto-reply \"no\" on install and quit.\n" \
     "-h, --help\tShow this very same text and quit.\n" \
     "--version\tShow current version number and quit." \
