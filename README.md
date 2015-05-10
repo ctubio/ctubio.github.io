@@ -24,10 +24,6 @@ and run the following command:
 $ bash -c "$(curl -s https://ctubio.github.io/INSTALL)"
 ```
 
-If the install path already contains the downloaded files,
-the conflict will be resolved with a
-[simple backup method](http://www.gnu.org/software/tar/manual/tar.html#SEC90).
-
 ## Strengthening rule *#2) Think before you type.*
 
 After running the command above, and before download or install any file, you will be prompted:
@@ -38,10 +34,12 @@ Let's install some initial files for your new project.
 Are you sure? [y/N]
 >
 ```
-
-## Help?
-
-Yes, Sir/Milady.
+### What if..
+####..the install path already contains the downloaded files?
+The conflict will be resolved with a
+[simple backup method](http://www.gnu.org/software/tar/manual/tar.html#SEC90).
+####..the manual prompt behaviour breaks your automated/silent/cron scripts?
+If the installation is not meant to be run manually, you may want to check all options available:
 ```bash
 $ bash -c "$(curl -s http://ctubio.github.io/INSTALL)" -- --help
 ```
@@ -49,7 +47,7 @@ $ bash -c "$(curl -s http://ctubio.github.io/INSTALL)" -- --help
 Yikes!
 Usage: INSTALL [option]
 Options:
-  -y, --yes     Auto-reply "yes" on install and install src files.
+  -y, --yes     Auto-reply "yes" on install and install src files in $PWD.
   -n, --no      Auto-reply "no" on install and quit.
   -h, --help    Show this very same text and quit.
       --version Show current version number and quit.
