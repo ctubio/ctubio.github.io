@@ -1,5 +1,27 @@
 # Change Log
 
+## [v0.0.0.6](https://github.com/ctubio/ctubio.github.io/tree/v0.0.0.6) (2015-05-10)
+
+[Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.5...v0.0.0.6)
+
+**Fixed bugs:**
+
+- Fix false positive builds in travis. [\#12](https://github.com/ctubio/ctubio.github.io/issues/12)
+
+## [v0.0.0.5](https://github.com/ctubio/ctubio.github.io/tree/v0.0.0.5) (2015-05-05)
+
+[Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.4...v0.0.0.5)
+
+**Implemented enhancements:**
+
+- Correctly handle arguments in INSTALL script. [\#8](https://github.com/ctubio/ctubio.github.io/issues/8)
+
+**Fixed bugs:**
+
+- Fix projects that are not managed by github.io. [\#13](https://github.com/ctubio/ctubio.github.io/issues/13)
+
+- Remove useless output in travis. [\#11](https://github.com/ctubio/ctubio.github.io/issues/11)
+
 ## [v0.0.0.4](https://github.com/ctubio/ctubio.github.io/tree/v0.0.0.4) (2015-05-02)
 
 [Full Changelog](https://github.com/ctubio/ctubio.github.io/compare/v0.0.0.3...v0.0.0.4)
