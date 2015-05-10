@@ -8,13 +8,13 @@ echo "Yikes!";
 for arg in "$@"; do
   shift
   case "$arg" in
-    "--help") set -- "$@" "-h" ;;
     "--yes")  set -- "$@" "-y" ;;
     "--no")   set -- "$@" "-n" ;;
+    "--help") set -- "$@" "-h" ;;
     *)        set -- "$@" "$arg"
   esac
 done
-REPLY='manual';
+REPLY="manual";
 OPTIND=1;
 while getopts ":hyn" opt; do
   case "$opt" in
