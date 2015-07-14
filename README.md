@@ -23,6 +23,12 @@ and run the following command:
 ``` bash
 $ bash -c "$(curl -s https://ctubio.github.io/INSTALL)"
 ```
+Is the command too long? make an alias!
+``` bash
+$ echo "alias Yikes='bash -c "$(curl -s https://ctubio.github.io/INSTALL)"';" >> ~/.bash_aliases
+$ source ~/.bash_aliases
+```
+now you can start all your new projects screaming to your tty ```Yikes```! :monkey_face: (give me thanks later [oh well, if you dont like create your own alias..])
 
 ## Strengthening rule *#2) Think before you type.*
 
@@ -52,3 +58,5 @@ Options:
   -h, --help    Show this very same text and quit.
       --version Show current version number and quit.
 ```
+####..i don't get it.. why? This is useless!
+Feel free to clone or fork it, and used it for your own purposes by replacing the distributed [common files](src) by your own files, so you can save some of your time while daily working. ~~Then, i will tell you how much useless your [src](src) files look to me!~~
