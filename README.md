@@ -13,6 +13,8 @@ that provides a few [common files](src) for *new* or *orphan* projects.
 
 ## Installing all *common files* via Bash/Curl in a swish
 
+[![Join the chat at https://gitter.im/ctubio/ctubio.github.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ctubio/ctubio.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Hold tight, because you can quickly download all [common files](src)
 into the root directory of your project (or any other local path of your
 machine), using the [INSTALL](INSTALL) script remotely over https.
